@@ -54,11 +54,12 @@ export default function SelectRolePage() {
   const router = useRouter()
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const loggedIn = localStorage.getItem('isLoggedIn')
-      if (!loggedIn) router.replace('/login')
-    }
-  }, [router])
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+  if (!isLoggedIn) {
+    router.replace("/login");
+  }
+}, [router]);
 
   return (
     <div className="min-h-screen relative overflow-hidden flex flex-col">

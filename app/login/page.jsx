@@ -22,8 +22,11 @@ export default function LoginPage() {
         }
       );
 
-      // ✅ STORE USER (VERY IMPORTANT)
+      // ✅ STORE USER
       localStorage.setItem("user", JSON.stringify(res.data));
+
+      // ✅ ADD THIS (VERY IMPORTANT 🔥)
+      localStorage.setItem("isLoggedIn", "true");
 
       // ✅ REDIRECT
       router.push("/select-role");
