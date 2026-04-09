@@ -6,7 +6,7 @@ export default function DonationsPage() {
  
   const [donations, setDonations] = useState([]);
 
-  // ✅ Fetch from backend
+  // Fetch from backend
   const fetchDonations = async () => {
     try {
       const res = await fetch("http://localhost:8080/api/donations");
@@ -28,21 +28,17 @@ export default function DonationsPage() {
 
       {donations.length === 0 ? (
         <p className="text-gray-400">No donations yet</p>
-        
       ) : (
-
         <div className="space-y-4">
-          {donations.map((donation, i) => (
+          {donations.map((d, i) => (   // ✅ FIXED HERE
             <div
               key={i}
               className="bg-[#0f172a] border border-gray-700 p-5 rounded-xl shadow-md hover:shadow-lg transition"
             >
-              {/* Food Name */}
               <h3 className="text-lg font-semibold text-emerald-400 mb-2">
                 {d.foodName}
               </h3>
 
-              {/* Details */}
               <p className="text-gray-300">
                 Quantity: <span className="text-white">{d.quantity}</span>
               </p>
@@ -51,16 +47,13 @@ export default function DonationsPage() {
                 Organization:{" "}
                 <span className="text-white">{d.organizationName}</span>
               </p>
-              
 
-              {/* Status Badge */}
               <span className="inline-block mt-3 px-3 py-1 text-sm rounded-full bg-yellow-500/20 text-yellow-400">
                 {d.status}
               </span>
             </div>
           ))}
         </div>
-
       )}
     </div>
   );
