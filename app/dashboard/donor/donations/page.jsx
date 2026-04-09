@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 export default function DonationsPage() {
-
+ const [loading, setLoading] = useState(true);
   const [donations, setDonations] = useState([]);
 
   // ✅ Fetch from backend
