@@ -76,3 +76,4 @@ export default function LoginPage() {
     </div>
   );
 }
+console.log("Login success");
