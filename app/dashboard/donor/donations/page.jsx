@@ -32,7 +32,7 @@ export default function DonationsPage() {
       ) : (
 
         <div className="space-y-4">
-          {donations.map((d, i) => (
+          {donations.map((donation, i) => (
             <div
               key={i}
               className="bg-[#0f172a] border border-gray-700 p-5 rounded-xl shadow-md hover:shadow-lg transition"
