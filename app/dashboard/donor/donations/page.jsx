@@ -54,6 +54,7 @@ export default function DonationsPage() {
               <p className="text-gray-400 text-center mt-10">
   No donations available 🚫
 </p>
+// Fetch donations from backend API
 
               {/* Status Badge */}
               <span className="inline-block mt-3 px-3 py-1 text-sm rounded-full bg-yellow-500/20 text-yellow-400">
