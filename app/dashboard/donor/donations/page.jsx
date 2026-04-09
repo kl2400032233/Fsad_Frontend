@@ -28,6 +28,7 @@ export default function DonationsPage() {
 
       {donations.length === 0 ? (
         <p className="text-gray-400">No donations yet</p>
+        
       ) : (
 
         <div className="space-y-4">
@@ -50,6 +51,7 @@ export default function DonationsPage() {
                 Organization:{" "}
                 <span className="text-white">{d.organizationName}</span>
               </p>
+              <p>No donations yet</p>
 
               {/* Status Badge */}
               <span className="inline-block mt-3 px-3 py-1 text-sm rounded-full bg-yellow-500/20 text-yellow-400">
